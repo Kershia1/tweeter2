@@ -27,7 +27,8 @@ https://stackoverflow.com/questions/49150876/put-content-under-fixed-navbar
 header {
   height: 520px;
   width: 100%;
-  background-color: orange;
+  background-color: #ff7308;
+  background-image: url("https://www.transparenttextures.com/patterns/exclusive-paper.png");
   display: flex;
   flex-direction: column;
   justify-content: center;
