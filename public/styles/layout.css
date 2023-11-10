@@ -30,8 +30,41 @@ body {
   justify-content: flex-end;
   font-family: "Bungee", sans-serif;
 }
- /* add bungee for header */
+ /* 
+ Style the <main> element to be:
 
- /*add  Source Sans 3 for Body */
+90% of the width of its parent element
+center aligned to the body
+the same background colour as the <body> element
+Tip: Add some temporary tags like paragraphs or headings (e.g. <p> <h1> <h2>) into main to see how it flows and that it aligns well vertically. We recommend using one of these handy Lorem Ipsum generators if you're at a loss for words.
+ */
 
- /*Otherwise use Sans Serif if choosen font is not avaliable.*/
+ main {
+  display: flex;
+  background-color: #f4f1ec;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Source Sans 3", sans-serif;
+  padding-left: 10px;
+  padding-right: 10px;
+ }
+
+
+/*
+ .container p1 {
+  display: flex;
+  position: row;
+ }
+
+ .container p2 {
+  display: flex;
+  position: row;
+ }
+
+ .container p3 {
+  display: flex;
+  position: row;
+ }
+
+ */
