@@ -1,0 +1,57 @@
+/*
+1} Style Header 
+The visible portion of the header should have a height of 400px and be 100% the width of its parent container
+-nav bar is 120px tall, so make it 520 px tall?
+The avatar should be centered vertically and horizontally (Hint: the justify-content and align-items properties are helpful for centering things if you're using Flexbox.)
+The name should be centered below the avatar
+The background-color should be a different colour than the nav and the body
+
+2} Add a Background Image
+Notice how the screen-shot above has a background that is textured. This is because there is a transparent background-image being used. Use this tool to find a background image you like: https://www.transparenttextures.com/ You don't have to make it look exactly like the texture above - choose an image you like!
+*/
+
+/*
+classes added to HTML which need to be styled
+main header container
+
+user-icon to center and display below nav. start at 130px down or just make extra tall and add in the additonal 120px to hight?
+
+user-name to center make font white like nav bar to match? light blue or like a tan orange background to style for contrast?
+
+https://stackoverflow.com/questions/21107675/pushing-content-below-a-positionfixed-top-nav-so-its-visible
+
+https://stackoverflow.com/questions/49150876/put-content-under-fixed-navbar
+*/
+
+
+header {
+  height: 520px;
+  width: 100%;
+  background-color: orange;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 120px;
+  z-index: 1;
+}
+
+.user-icon {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ height: 100px;
+ width: 50px;
+ border-radius: 50%;
+ margin-top: 150px;
+ 
+}
+
+.user-name {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: center;
+} 
+
