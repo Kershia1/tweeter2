@@ -9,6 +9,14 @@ Full width of the viewport
 <span> within the <nav> uses Bungee as its default font-family
 1.5ems of space on the right and left between the content and the edges
 
+      <style>
+       div { 
+        height: 120 px;
+        width: 100%;
+        padding-right: 24px;
+        padding-left: 24px;
+       } 
+      </style>
 
 */
 
@@ -18,4 +26,8 @@ nav {
   color: #FFFFFF;
   display: flex;
   justify-content: flex-start;
+  height: 120px;
+  width: 100%;
+  padding-right: 1.5em;
+  padding-left: 1.5em;
 }
