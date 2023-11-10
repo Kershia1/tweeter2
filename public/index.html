@@ -5,11 +5,15 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+
             <!-- Use for Body  Source Sans 3 weights: 300 & 600 with italic versions of each for-->
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
-    
+
+                <!-- Font Awesome for the double-down arrows-->
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
 
@@ -31,7 +35,13 @@
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
-      <span>tweeter</span>
+      <!--- span element is used for inline organization and styling.-->
+      <span>tweeter</span> 
+        <div>
+          <!-- A div element is used for block-level organization and styling of page elements, added a non breaking space-->
+          <span> <a class="write-a-new-tweet" ><strong>Write&nbsp;</strong>  A New Tweet</a></span> 
+          <i class="fa-solid fa-angles-down" style="color: red" ></i>
+        </div>
     </nav>
 
     <!-- Page-specific (main) content here -->

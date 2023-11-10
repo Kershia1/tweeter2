@@ -9,14 +9,9 @@ Full width of the viewport
 <span> within the <nav> uses Bungee as its default font-family
 1.5ems of space on the right and left between the content and the edges
 
-      <style>
-       div { 
-        height: 120 px;
-        width: 100%;
-        padding-right: 24px;
-        padding-left: 24px;
-       } 
-      </style>
+add write a new tweet to the right and display the double down arrows below. 
+
+space between to create space between the items. 
 
 */
 
@@ -25,9 +20,26 @@ nav {
   font-family: "Bungee", sans-serif;
   color: #FFFFFF;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
+  align-items: center;
   height: 120px;
   width: 100%;
   padding-right: 1.5em;
   padding-left: 1.5em;
 }
+
+/*
+found the class can't get it too move over
+*/
+.write-a-new-tweet {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+/*
+put the double arrow below write a new tweet.
+*/
+ a {
+  display: flex;
+  justify-content: flex-end;
+} 
