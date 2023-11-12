@@ -27,6 +27,8 @@
 
     <link rel="stylesheet" href="styles/header.css">
 
+    <link rel="stylesheet" href="styles/tweets.css">
+
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -57,9 +59,22 @@
   </header>
     <!-- Page-specific (main) content here -->
     <main class="container">
-    <p> "Lorem Ipsum is the single greatest threat. We are not - we are not keeping up with other websites. Lorem Ipsum best not make any more threats to your website. It will be met with fire and fury like the world has never seen. Does everybody know that pig named Lorem Ipsum? An extremely credible source has called my office and told me that Barack Obamas placeholder text is a fraud."</p>
-    <p2>Hodor. Hodor hodor, hodor. Hodor hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor; hodor hodor hodor. Hodor. Hodor hodor; hodor hodor - hodor, hodor, hodor hodor. Hodor, hodor. Hodor. Hodor, hodor hodor hodor; hodor hodor; hodor hodor hodor! Hodor hodor HODOR! Hodor hodor... Hodor hodor hodor...</p2>
-    <p3>Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus resi dentevil vultus comedat cerebella viventium.</p3>
+      <!--Inside the main container element, add the following HTML markup to create the form:-->
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <form>
+          <label for="tweet-text">What are you humming about?</label>
+          <textarea name="text" id="tweet-text"></textarea>
+          <div>
+            <button type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
+<!-- What are you humming about placeholder here?  above a line-->
+<!-- tweet logo and character counter justiefied to each side below line-->
+<!-- make a new tweet here? -->
+<!-- post created tweet here? -->
   </main>
   </body>
 </html>
