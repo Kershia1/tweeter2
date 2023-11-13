@@ -21,6 +21,14 @@ user-name to center make font white like nav bar to match? light blue or like a 
 https://stackoverflow.com/questions/21107675/pushing-content-below-a-positionfixed-top-nav-so-its-visible
 
 https://stackoverflow.com/questions/49150876/put-content-under-fixed-navbar
+
+The dot( . ) signifies a class name while the hash ( # ) signifies an element with a specific id attribute. The class will apply to any element decorated with that particular class, while the # style will only apply to the element with that particular id.
+
+. is for classes, reusable in HTML target is <div class="class"></div>
+
+ # is for ids, single use higher specificty than class target is <div id="id"></div>
+
+https://stackoverflow.com/questions/602168/in-css-what-is-the-difference-between-and-when-declaring-a-set-of-styles#:~:text=The%20dot(%20.%20),element%20with%20that%20particular%20id.
 */
 
 

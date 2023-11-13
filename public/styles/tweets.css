@@ -1,0 +1,56 @@
+/*
+to style 
+tweet-container
+    -styled with a border and a border-radius
+
+  tweet-header
+    -source sans 3 font, 16px, 
+    -user-avatar and username on far right space-between  @alias on far left
+
+  tweet-body
+    -tweet-text
+    -source sans 3 font, 24px, bold
+
+  tweet-footer
+    -styled with a border-top 5px ridge #878686
+    -tweet-date source sans 3 font, 12px, bold
+    -tweet-icons
+
+    -additonal styling: 
+    hover over tweet-container
+    cursor: pointer
+
+*/
+
+.tweet-container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #878686;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-family: "Source Sans 3", sans-serif;
+}
+
+.tweet-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.tweet-body {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.tweet-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: 5px ridge #878686;
+  padding: 10px;
+}
