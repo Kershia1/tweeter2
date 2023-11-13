@@ -41,7 +41,6 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 120px;
   z-index: 1;
 }
 
