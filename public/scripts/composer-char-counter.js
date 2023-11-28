@@ -1,13 +1,13 @@
 
 //allot 2 hours to assingment after mentor assistance with the post request.
-
-$(document).ready(function() {
-  // console.log('document is ready');
+console.log('JavaScript file loaded');
+$(document).ready(function() { // <-- added missing parentheses
+  console.log('document is ready');
  let maxCharacters = 140;
 
  $('#tweet-text').on('input', function() {
   //  console.log('input event fired');
-   let input = $(this).val().length;
+   let input = $(this).val().length;//determines the length of the counter
    // console.log(input);
    let counter = maxCharacters - input;
    // console.log(counter);
@@ -42,7 +42,7 @@ The .on() method in jQuery is used to attach one or more event handlers for spec
   * //this is the input event I want to listen for with .on()
   * input = .length 
   * 
-  * The function provided as the second argument to .on() is the event handler that gets executed every time the 'input' event is fired. In your case, this function is used to calculate and display the remaining characters.
+  * The function provided as the second argument to .on() is the event handler that gets executed every time the 'input' event is fired. In this case, this function is used to calculate and display the remaining characters.
   * 
   * //this is how I will calculuate how many characters are left to enter and display it in the counter i.e $counterElement (140 - 60 `input` = 80 characters left)
   * counter = maxCharacters - input; 

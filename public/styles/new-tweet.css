@@ -65,3 +65,7 @@ font-family: "Source Sans 3", sans-serif;
   font-family: "Source Sans 3", sans-serif;
   padding-bottom: 10px;
 }
+
+.negativetweet {
+  color: red;
+}
