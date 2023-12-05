@@ -23,7 +23,6 @@ tweet-container
     article= "tweets"
 
 */
-
 .tweets-container {
   display: flex;
   flex-direction: column;
@@ -35,10 +34,9 @@ tweet-container
 
 article.tweets {
   display: flex;
-  background-color: whitesmoke;
-  background-image: none;
+  flex-direction: column;
   box-sizing: border-box;
-  height: 200px;
+  height: auto;
   width: 90%;
   border: 1px solid #878686;
   border-radius: 5px;
@@ -47,23 +45,28 @@ article.tweets {
   box-shadow: none;
 }
 
-.tweets-container:hover {
-  box-shadow: #878686 0px 0px 5px 5px;
+article.tweets:hover {
+  box-shadow: #868787  5px 5px 0px 0px;
 }
+
 
 .tweets-header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   font-size: 16px;
   font-weight: bold;
   padding: 10px;
-}
+} 
 
 .tweets-body {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
   padding: 10px;
 }
 
@@ -72,6 +75,12 @@ article.tweets {
   flex-direction: row;
   justify-content: space-between;
   border-top: 5px ridge #878686;
+  margin-top: 10px;
+  font-size: 12px;
+  font-family: "Source Sans 3", sans-serif;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
   padding: 10px;
 }
 
@@ -81,6 +90,7 @@ article.tweets {
   justify-content: flex-end;
   align-items: baseline;
   width: 100px;
+  padding-bottom: 10px;
   cursor: pointer;
 }
 
