@@ -55,10 +55,27 @@ article.tweets:hover {
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 12px;
+  font-weight: 200;
   padding: 10px;
 } 
+
+.user-img {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.user-handle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-name {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
 
 .tweets-body {
   display: flex;
