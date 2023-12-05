@@ -60,7 +60,8 @@ font-family: "Source Sans 3", sans-serif;
 
 .counter {
   display: flex;
-  position: column;
+  /*position: column; */
+  flex-direction: column;
   justify-content: flex-end;
   font-family: "Source Sans 3", sans-serif;
   padding-bottom: 10px;
