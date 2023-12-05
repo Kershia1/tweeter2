@@ -63,27 +63,124 @@
   </header>
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <!--Inside the main container element, add the following HTML markup to create the form:-->
+      <!-- New Tweet Section -->
       <section class="new-tweet">
         <h2 class="header-new-tweet"> Compose Tweet</h2>
         <form action="/tweets" method="POST" id="new-tweet-form">
-          <label for="tweet-text"></label>
-          <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+          <label for="tweets-text"></label>
+          <textarea name="text" id="tweets-text" placeholder="What are you humming about?"></textarea>
           <div class="footer-new-tweet">
             <button class="button" type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
+            <output name="counter" class="counter" for="tweets-text">140</output>
           </div>
         </form>
       </section>
-      <section class="tweet-container"><!--add a new section that will serve as a container for all the tweets.--></section>
-      <article> <!-- he <article> tag specifies independent, self-contained content. also supports the Event Attributes in HTML. --></article>
-      <!-- each tweet will be an article, needs a border  -->
+
+      <!-- Tweets Section -->
+      <!-- 1st tweet-->
+      <section class="tweets-container"></section>
+
+      <article class="tweets">
+        <header class="tweets-header">
+          <!-- <div class="user-icon">
+            <img src="/images/profile-hex.png"> 
+          </div> -->
+          <!--  <div class="user-name">
+            <h2>Desiree Ingram</h2>
+          </div>  -->
+          <div class="user-handle">
+            <h2>@desiree</h2>
+          </div>
+        </header>
+        <div class="tweets-text">
+          <p>If you are neutral in situations of injustice, you have chosen the side of the oppressor. If an elephant has its foot on the tail of a mouse and you say that you are neutral, the mouse will not appreciate your neutrality.
+
+            --Desmond Tutu</p>
+        </div>
+        <footer class="tweets-footer">
+          <div class="tweets-time">
+            <p>10 days ago</p>
+          </div>
+          <div class="tweets-icons">
+            <i class="fa-solid fa-flag"></i>
+            <i class="fa-solid fa-retweet"></i>
+            <i class="fa-solid fa-heart"></i>
+          </div>
+        </article>
+
+          <!-- 2nd tweet-->
+          <article class="tweets">
+            <header class="tweets-header">
+              <!-- <div class="user-icon">
+                <img src="/images/profile-hex.png"> 
+              </div> -->
+              <!--  <div class="user-name">
+                <h2>Desiree Ingram</h2>
+              </div>  -->
+              <div class="user-handle">
+                <h2>@Teresa</h2>
+              </div>
+            </header>
+            <div class="tweets-text">
+              <p>If we have no peace, it is because we have forgotten that we belong to each other.
+    
+                --Mother Teresa</p>
+            </div>
+            <footer class="tweets-footer">
+              <div class="tweets-time">
+                <p>10 days ago</p>
+              </div>
+              <div class="tweets-icons">
+                <i class="fa-solid fa-flag"></i>
+                <i class="fa-solid fa-retweet"></i>
+                <i class="fa-solid fa-heart"></i>
+              </div>
+            </article>
+
+              <!-- 3rd tweet-->
+                        <!-- 2nd tweet-->
+          <article class="tweets">
+            <header class="tweets-header">
+              <!-- <div class="user-icon">
+                <img src="/images/profile-hex.png"> 
+              </div> -->
+              <!--  <div class="user-name">
+                <h2>Desiree Ingram</h2>
+              </div>  -->
+              <div class="user-handle">
+                <h2>@ralph</h2>
+              </div>
+            </header>
+            <div class="tweets-text">
+              <p>Thought is the blossom; language the bud; action the fruit behind it.
+    
+                --Ralph Waldo Emerson</p>
+            </div>
+            <footer class="tweets-footer">
+              <div class="tweets-time">
+                <p>10 days ago</p>
+              </div>
+              <div class="tweets-icons">
+                <i class="fa-solid fa-flag"></i>
+                <i class="fa-solid fa-retweet"></i>
+                <i class="fa-solid fa-heart"></i>
+              </div>
+            </article>
+
+        </footer>
+
+  </main>
+  </body>
+</html>
+
+<!--add a new section that will serve as a container for all the tweets.-->
+<!-- he <article> tag specifies independent, self-contained content. also supports the Event Attributes in HTML. -->
+
+
+        <!-- each tweet will be an article, needs a border  -->
       <!-- header username and @handle  -->
       <!-- text input jusitified above a line   -->
       <!-- footer time stamp left icons for flag, retweet, and like right  -->
       <!-- make a new tweet here? -->
 <!-- make a new tweet here? -->
 <!-- post created tweet here? -->
-  </main>
-  </body>
-</html>
