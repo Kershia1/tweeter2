@@ -62,12 +62,12 @@ header.tweets-header {
   width: 100%;
 } 
 
-.user-img img {
+.user-avatars img {
   height: 48px;
   width: 48px;
 }
 
-.user-img {
+.user-avatars {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
