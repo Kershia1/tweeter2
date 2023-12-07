@@ -49,32 +49,44 @@ article.tweets:hover {
   box-shadow: #868787  5px 5px 0px 0px;
 }
 
-
-.tweets-header {
+header.tweets-header {
   display: flex;
+  background-color: whitesmoke;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   font-size: 12px;
   font-weight: 200;
   padding: 10px;
+  height: 64px;
+  width: 100%;
 } 
+
+.user-img img {
+  height: 48px;
+  width: 48px;
+}
 
 .user-img {
   display: flex;
   justify-content: flex-start;
-  align-items: center;
-}
-.user-handle {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  order: 1;
 }
 
 .user-name {
+  margin-left: 10px;
+  align-items: flex-start;
+  font-weight: 400;
+  order: 2;
+}
+
+.user-handle {
   display: flex;
-  justify-content: start;
-  align-items: center;
+  justify-content: flex-end;
+  align-items: flex-start;
+  font-weight: 200;
+  order: 3;
 }
 
 .tweets-body {
