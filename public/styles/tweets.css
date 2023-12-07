@@ -46,17 +46,17 @@ article.tweets {
 }
 
 article.tweets:hover {
-  box-shadow: #868787  5px 5px 0px 0px;
+  box-shadow: #868687  5px 5px 0px 0px;
 }
 
 header.tweets-header {
   display: flex;
-  background-color: whitesmoke;
+  background-color: #f4f1ec;
+  background-image: none;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  font-size: 12px;
-  font-weight: 200;
+  font-size: 24px;
   padding: 10px;
   height: 64px;
   width: 100%;
@@ -71,13 +71,14 @@ header.tweets-header {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
+  margin-top: 10px;
   order: 1;
 }
 
 .user-name {
-  margin-left: 10px;
   align-items: flex-start;
-  font-weight: 400;
+  color:#878686;
+  font-weight: light 300;
   order: 2;
 }
 
@@ -85,7 +86,9 @@ header.tweets-header {
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
-  font-weight: 200;
+  color:rgb(168, 178, 182);
+  font-weight: 300;
+  flex-grow: 1;
   order: 3;
 }
 
