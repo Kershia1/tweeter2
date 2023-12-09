@@ -11,5 +11,5 @@ function count() {
 }
 
 $(document).ready(function () {
-  $("#tweet-text").on("input", count);
+  $("#tweets-text").on("input", count);
 });
