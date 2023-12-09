@@ -57,23 +57,11 @@ $(document).ready(function () {
 
   const renderTweets = function (tweets) {
     console.log("in renderTweets");
-    $('#tweets-container').empty();// empties the tweets container, I can't remember why I need to do this..? 
-    for (let tweet of tweets) {// loops through tweets
+    $('#tweets-container').empty();
+    for (let tweet of tweets) {
       let $tweet = createTweetElement(tweet);// creates a variable that calls the createTweetElement function and passes in the tweet object
       $('#tweets-container').append($tweet);// takes return value and appends it to the tweets container
     }
-  };
-
-  const tweetData = {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png",
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
   };
 
   const createTweetElement = function (tweet) {
