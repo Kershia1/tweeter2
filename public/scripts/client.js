@@ -97,12 +97,12 @@ $(document).ready(function () {
             </div>
           </footer>
         </article> `);
-    console.log($tweet.html());
+    //console.log($tweet.html());
     return $tweet;
   };
 
 
-  const $tweet = createTweetElement(tweetData);
+  const $tweet = createTweetElement(data);
 
   // Test / driver code (temporary)
   console.log($tweet); // to see what it looks like
@@ -140,6 +140,6 @@ $(document).ready(function () {
         console.log('Error: ', err);
       }
     });
-    loadTweets();
   };
+  loadTweets();
 });
