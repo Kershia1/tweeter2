@@ -65,9 +65,8 @@ $(document).ready(function () {
   };
 
   const createTweetElement = function (tweet) {
-    let timestamp = new Date(tweet.created_at);
-    let $time = $('<time>').attr('datetime', timestamp.toISOString()).text(timeago.format(timestamp));
-    $time.timeago();
+    console.log("in createTweetElement");
+    const approxTime = timeago.format(tweet.created_at);
 
     let $tweet = $(`
 <article class="tweets">
@@ -88,7 +87,7 @@ $(document).ready(function () {
         </div>
           <footer class="tweets-footer">
             <div class="tweets-time">
-              <p>${$time.timeago()}</p>
+              <p>${approxTime}</p>
             </div>
             <div class="tweets-icons">
               <i class="fa-solid fa-flag"></i>
@@ -110,6 +109,14 @@ $(document).ready(function () {
 
   renderTweets(data);
 
+  // Event listener for the submit button
+  $('#tweet-form').submit(function (event) {
+    event.preventDefault();
+    console.log('Form submitted, performing AJAX call...');
+  
+
+  // $form.searlize(); is a jQuery function that takes in a form input and returns a query string
+  // const url = '/tweets';
   const formData = $(this).serialize();
   console.log('Seralized data: ', formData);
 
@@ -125,9 +132,10 @@ $(document).ready(function () {
       console.log('Error: ', err);
     }
   });
+});
 
   // Fetch tweets from the http://localhost:8080/tweets page
-  const loadTweets = function () {
+  const loadTweets = () => {
     $.ajax({
       url: '/tweets',
       method: 'GET',
