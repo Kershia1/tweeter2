@@ -114,6 +114,17 @@ $(document).ready(function () {
     event.preventDefault();
     console.log('Form submitted, performing AJAX call...');
   
+    //form validation and alert in vanilla javascript
+    const tweetContent = document.getElementById('tweet-text').value;
+    if (tweetContent === null || tweetContent === "") {
+      alert("Your tweet is empty, please enter some text");
+      return
+    }
+
+    if (tweetContent.length > 140) {
+      alert("Your tweet is too long, enter less than 140 characters");
+      return;
+    }
 
   // $form.searlize(); is a jQuery function that takes in a form input and returns a query string
   // const url = '/tweets';
