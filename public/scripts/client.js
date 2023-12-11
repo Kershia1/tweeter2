@@ -4,118 +4,59 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-
-/*
-* wrote backwards heres the plan to get this working
- * 1- create a function that takes in a tweet object doc.ready
- * 
- * 2-test data
- * 
- * 3- render the tweets to the page
- * 
- * 4- create tweets
- * 
- * 5- event listener for the submit button
- * 
- * 6- prevent the default behaviour of the submit event
- * 6-b serialize the form data
- * 
- * 7- use the jQuery library to submit a POST request that sends the serialized data to the server
- * 
- * 8- create an AJAX POST request in client.js that sends the form data to the server.
- * 
- */
-console.log("in client.js");
 $(document).ready(function () {
-
   console.log("in document ready");
-  const data = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png"
-        ,
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd"
-      },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
-    }
-  ];
 
-  const renderTweets = function (tweets) {
-    console.log("in renderTweets");
-    $('#tweets-container').empty();
-    for (let tweet of tweets) {
-      let $tweet = createTweetElement(tweet);// creates a variable that calls the createTweetElement function and passes in the tweet object
-      $('#tweets-container').append($tweet);// takes return value and appends it to the tweets container
-    }
-  };
+const renderTweets = function (tweets) {
+  console.log("in renderTweets");
+  $('#tweets-container').empty();
+  for (let tweet of tweets) {
+    let $tweet = createTweetElement(tweet);// creates a variable that calls the createTweetElement function and passes in the tweet object
+    $('#tweets-container').prepend($tweet);// takes return value and appends it to the tweets container
+  }
+};
 
-  const createTweetElement = function (tweet) {
-    console.log("in createTweetElement");
-    const approxTime = timeago.format(tweet.created_at);
+const createTweetElement = function (tweet) {
+  console.log("in createTweetElement");
+  const approxTime = timeago.format(tweet.created_at);
 
-    let $tweet = $(`
-<article class="tweets">
-        <header class="tweets-header">
-            <div class="user-img">
-              <img src="${tweet.user.avatars}" alt="Profile picture of ${tweet.user.name}"> 
-            </div> 
-                <div class="user-name">
-                <h6>${tweet.user.name}</h6>
-                </div>
-            <div class="user-handle">
-              <h6>${tweet.user.handle}</h6>
-          </div>
-        </header>
-
-        <div class="tweets-text">
-          <p>${tweet.content.text}</p>
+  let $tweet = $(`
+  <article class="tweets">
+  <header class="tweets-header">
+        <div class="user-img">
+          <img src="${tweet.user.avatars}" alt="Profile picture of ${tweet.user.name}"> 
+        </div> 
+        <div class="user-name">
+          <h6>${tweet.user.name}</h6>
         </div>
-          <footer class="tweets-footer">
-            <div class="tweets-time">
-              <p>${approxTime}</p>
-            </div>
-            <div class="tweets-icons">
-              <i class="fa-solid fa-flag"></i>
-              <i class="fa-solid fa-retweet"></i>
-              <i class="fa-solid fa-heart"></i>
-            </div>
-          </footer>
-        </article> `);
-    //console.log($tweet.html());
+        <div class="user-handle">
+          <h6>${tweet.user.handle}</h6>
+        </div>
+      </header>
+      <div class="tweets-text">
+        <p>${tweet.content.text}</p>
+      </div>
+      <footer class="tweets-footer">
+        <div class="tweets-time">
+          <p>${approxTime}</p>
+        </div>
+        <div class="tweets-icons">
+          <i class="fa-solid fa-flag"></i>
+          <i class="fa-solid fa-retweet"></i>
+          <i class="fa-solid fa-heart"></i>
+        </div>
+      </footer>
+    </article> `);
+
     return $tweet;
   };
 
-
-  const $tweet = createTweetElement(data);
-
-  // Test / driver code (temporary)
-  console.log($tweet); // to see what it looks like
-  $('#tweets-container').append($tweet);
-
-  renderTweets(data);
-
-  // Event listener for the submit button
-  $('#tweet-form').submit(function (event) {
+  $('#new-tweet-form').submit(function (event) {
     event.preventDefault();
     console.log('Form submitted, performing AJAX call...');
   
     //form validation and alert in vanilla javascript
-    const tweetContent = document.getElementById('tweet-text').value;
+    const tweetContent = document.getElementById('tweets-text').value;
     if (tweetContent === null || tweetContent === "") {
       alert("Your tweet is empty, please enter some text");
       return
@@ -126,21 +67,21 @@ $(document).ready(function () {
       return;
     }
 
-  // $form.searlize(); is a jQuery function that takes in a form input and returns a query string
-  // const url = '/tweets';
+  // Serialize the form data into a query string
   const formData = $(this).serialize();
   console.log('Seralized data: ', formData);
 
-  // Send the AJAX POST request to the server 
+  // Send the AJAX POST request to the server
   $.ajax({
     url: '/tweets',
     method: 'POST',
     data: formData,
     success: (response) => {
       console.log('Success: ', response);
+      loadTweets();
     },
     error: (err) => {
-      console.log('Error: ', err);
+      console.log("Error: ", err);
     }
   });
 });
@@ -160,5 +101,5 @@ $(document).ready(function () {
       }
     });
   };
-  loadTweets();
+loadTweets();
 });
