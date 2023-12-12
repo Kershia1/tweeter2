@@ -4,10 +4,15 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-const timeago = require('timeago.js');
-
 $(document).ready(function () {
   console.log("in document ready");
+
+//escape function to prevent cross site scripting, goes at the top of the file?
+const escape = function (str) {
+  let div = document.createElement('div');//creates a div element
+  div.appendChild(document.createTextNode(str)); //creates a text node containing the string, and appends it to the div
+  return div.innerHTML; //returns the text content of the div
+}
 
   const renderTweets = function (tweets) {
     console.log("in renderTweets");
@@ -19,11 +24,12 @@ $(document).ready(function () {
   };
 
   //take tweet obj return jquery obj with tweet html
-  const createTweetElement = function (tweet) {
+  const createTweetElement = function (tweetStuff) {
     console.log("in createTweetElement");
     let approxTime;
     try {
-      approxTime = timeago.format(tweet.created_at);
+      const timeagoInstance = timeago();
+      approxTime = timeagoInstance.format(tweetStuff.created_at);
     } catch (error) {
       console.error('timeago is not defined');
     }
@@ -33,17 +39,17 @@ $(document).ready(function () {
   <article class="tweets">
   <header class="tweets-header">
         <div class="user-img">
-          <img src="${tweet.user.avatars}" alt="Profile picture of ${tweet.user.name}"> 
+          <img src="${escape(tweetStuff.user.avatars)}" alt="Profile picture of ${escape(tweetStuff.user.name)}"> 
         </div> 
         <div class="user-name">
-          <h6>${tweet.user.name}</h6>
+          <h6>${escape(tweetStuff.user.name)}</h6>
         </div>
         <div class="user-handle">
-          <h6>${tweet.user.handle}</h6>
+          <h6>${escape(tweetStuff.user.handle)}</h6>
         </div>
       </header>
       <div class="tweets-text">
-        <p>${tweet.content.text}</p>
+        <p>${escape(tweetStuff.content.text)}</p>
       </div>
       <footer class="tweets-footer">
         <div class="tweets-time">
