@@ -4,24 +4,29 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+const timeago = require('timeago.js');
+
 $(document).ready(function () {
   console.log("in document ready");
 
-  //take in an array of tweet objects and then append each one to the tweets container
   const renderTweets = function (tweets) {
     console.log("in renderTweets");
-    $('#tweets-container').empty(); // empties the tweets container so that it doesn't keep appending the same tweets over and over again
+    $('.tweets-container').empty(); // empties the tweets container so that it doesn't keep appending the same tweets over and over again
     for (let tweet of tweets) {
       let $tweet = createTweetElement(tweet);//tweet html
-      $('#tweets-container').prepend($tweet);//prepend to tweets container instead of append so that new tweets are at the top
+      $('.tweets-container').prepend($tweet);//prepend to tweets container instead of append so that new tweets are at the top
     }
   };
 
   //take tweet obj return jquery obj with tweet html
-  //curl -X POST -d "tweetContent=textiytexttext" http://localhost:8080/
   const createTweetElement = function (tweet) {
     console.log("in createTweetElement");
-    const approxTime = timeago.format(tweet.created_at); //still broken grrh!
+    let approxTime;
+    try {
+      approxTime = timeago.format(tweet.created_at);
+    } catch (error) {
+      console.error('timeago is not defined');
+    }
 
     //create jquery obj for tweet html
     let $tweet = $(`
@@ -56,9 +61,8 @@ $(document).ready(function () {
   };
 
   const loadTweets = () => {
-    $.get("/", function (tweets) {
-      console.log('Success: ', tweets);
-      renderTweets(tweets.reverse());
+    $.get("/tweets", function (tweets) {
+      renderTweets(tweets);
     });
   };
 
@@ -79,64 +83,16 @@ $(document).ready(function () {
       console.log("tweet is valid");
       const newTweet = $(this).serialize();
       console.log("new tweet is: ", newTweet);
-      $(this).find('#tweets-text').val(''); //clear the text area after submission
+      $(this).find('.tweets-text').val(''); //clear the text area after submission
       $(this).find('.counter').val(140); //reset the counter to 140 after 
 
       // Send the AJAX POST request to the server
-      $.post("/", newTweet, function (response) {
+      $.post("/tweets", newTweet, function (response) {
         console.log("Success Tweet Posted: ", response);
         loadTweets(); //this happens if the post will finally work
       });
     }
 
   });
-  loadTweets(); //this is when everything is loaded, so it will fetch and render the tweets on page load after the document is ready and parsed
+  loadTweets(); //load tweets on page load
 });
-
-
-// Fetch tweets from the http://localhost:8080/tweets page
-//am I referencing the right page here? is it '/tweets' or '/'? since I seem to stay on the splash page when I submit a tweet I think it's '/'
-// const loadTweets = () => {
-//   $.ajax({
-//     url: "/",
-//    // url: '/tweets',
-//     method: 'GET',
-//     dataType: 'json',
-//     success: (tweets) => {
-//       console.log('Success: ', tweets);
-//       renderTweets(tweets);
-//     },
-//     error: (err) => {
-//       console.log('Error: ', err);
-//     }
-//   });
-// };
-//dif axjax call for get request
-
-
-
-// Send the AJAX POST request to the server
-// $.ajax({
-//   url: "/",
-//   //url: '/tweets',
-//   method: 'POST',
-//   data: formData,
-//   success: (response) => {
-//     console.log('Success: ', response);
-//     loadTweets(); //load tweets again to fetch and render the new tweet only?
-//   },
-//   error: (err) => {
-//     console.log("Error: ", err);
-//   }
-// });
-
-//work flow 
-//doc is ready, load tweets will fetch and render tweets
-
-//render tweets will call createTweetElement for each tweet
-
-//when the form is submitted, the form data is serialized and validataed and sent to the server via ajax post request
-
-//successful post req will result in loadtweets being passed again to fetch and render the new tweet AND old tweets, which will be prepended to the tweets container
-
-//maybe render in reverse order so that new tweets are at the top, once I get eerything working again?
