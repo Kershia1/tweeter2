@@ -1,28 +1,4 @@
-/*
-to style 
-tweet-container
-    -styled with a border and a border-radius
 
-  tweet-header
-    -source sans 3 font, 16px, 
-    -user-avatar and username on far right space-between  @alias on far left
-
-  tweet-body
-    -tweet-text
-    -source sans 3 font, 24px, bold
-
-  tweet-footer
-    -styled with a border-top 5px ridge #878686
-    -tweet-date source sans 3 font, 12px, bold
-    -tweet-icons
-
-    -additonal styling: 
-    hover over tweet-container
-    cursor: pointer
-
-    article= "tweets"
-
-*/
 .tweets-container {
   display: flex;
   flex-direction: column;
@@ -136,4 +112,26 @@ header.tweets-header {
 
 .tweets-icons  i.fa-heart:hover {
   color: #f2d91d;
+}
+
+/* Style desktop screens */
+@media only screen and (min-width: 1024px) {
+  #tweets {
+    width: 100; /* 100% of the parent */
+  }
+}
+/* Style tablet screens min and max widths added to account for screen sizing */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  #tweets {
+    width: 100; /* 80% of the parent, needed? */
+    margin: auto; /* center the container */
+  }
+}
+
+/* Style mobile phone screens */
+@media only screen and (max-width: 767px) {
+  #tweets {
+    width: 100; /* 100% of the parent */
+    margin: auto; /* center the container */
+  }
 }

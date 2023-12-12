@@ -30,14 +30,6 @@ body {
   justify-content: flex-end;
   font-family: "Bungee", sans-serif;
 }
- /* 
- Style the <main> element to be:
-
-90% of the width of its parent element
-center aligned to the body
-the same background colour as the <body> element
-Tip: Add some temporary tags like paragraphs or headings (e.g. <p> <h1> <h2>) into main to see how it flows and that it aligns well vertically. We recommend using one of these handy Lorem Ipsum generators if you're at a loss for words.
- */
 
  main {
   display: flex;
@@ -49,3 +41,25 @@ Tip: Add some temporary tags like paragraphs or headings (e.g. <p> <h1> <h2>) in
   padding-left: 10px;
   padding-right: 10px;
  }
+
+ /* Style desktop screens */
+@media only screen and (min-width: 1024px) {
+  #tweets {
+    width: 100; /* 100% of the parent */
+  }
+}
+/* Style tablet screens min and max widths added to account for screen sizing */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  #tweets {
+    width: 100; /* 80% of the parent, needed? */
+    margin: auto; /* center the container */
+  }
+}
+
+/* Style mobile phone screens */
+@media only screen and (max-width: 767px) {
+  #tweets {
+    width: 100; /* 100% of the parent */
+    margin: auto; /* center the container */
+  }
+}
