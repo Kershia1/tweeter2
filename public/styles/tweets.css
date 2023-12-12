@@ -2,7 +2,6 @@
 .tweets-container {
   display: flex;
   flex-direction: column;
-  border: 1px solid #878686; 
   margin-top: 10px;
   font-family: "Source Sans 3", sans-serif;
 }
