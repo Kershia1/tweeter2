@@ -1,3 +1,4 @@
+/* in-line with top of text*/
 header {
   height: 520px;
   width: 100%;
@@ -7,6 +8,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 20px;
 }
 
 .user-icon {
