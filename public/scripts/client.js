@@ -14,6 +14,10 @@ const escape = function (str) {
   return div.innerHTML; //returns the text content of the div
 }
 
+//errror message function after XSS validation?
+$("#error-empty-tweet").hide(); //hide the error message by default
+$("#error-long-tweet").hide(); //hide the error message by default
+
   const renderTweets = function (tweets) {
     console.log("in renderTweets");
     $('.tweets-container').empty(); // empties the tweets container so that it doesn't keep appending the same tweets over and over again
@@ -75,18 +79,25 @@ const escape = function (str) {
   //event handler for form submission
   $('#new-tweet-form').submit(function (event) {
     event.preventDefault();
-    console.log('Form submitted, performing AJAX call...');
 
-    //form validation and alert in vanilla javascript
     const tweetContent = document.getElementById('tweets-text').value;
-    if (tweetContent === null || tweetContent === "") {
-      alert("Your tweet is empty, please enter some text");
-      return;
+
+    // $("#error-empty-tweet").slideDown("slow"); //show the error message
+    // $("#error-long-tweet").slideDown("slow"); //show the error message
+
+    if (!tweetContent) {
+      $("#error-empty-tweet").slideDown("slow"); //show the error message
+      $("#error-long-tweet").hide(); //hide this error message
+
     } else if (tweetContent.length > 140) {
-      alert("Your tweet is too long, enter less than 140 characters");
-      return;
-    } else {
+      $("#error-long-tweet").slideDown("slow"); //show the error message
+      $("#error-empty-tweet").hide(); //hide this error message
+
+    } else { //if tweet is valid no errors are shown
+      $("#error-empty-tweet").hide(); //hide this error message
+      $("#error-long-tweet").hide(); //hide this error message
       console.log("tweet is valid");
+      
       const newTweet = $(this).serialize();
       console.log("new tweet is: ", newTweet);
       $(this).find('.tweets-text').val(''); //clear the text area after submission

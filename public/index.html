@@ -75,6 +75,14 @@
       <!-- New Tweet Section -->
       <section class="new-tweet">
         <h2 class="header-new-tweet"> Compose Tweet</h2>
+        <span id="error"></span> 
+
+        <div id="error-empty-tweet" class="error" style="display: none;">
+         Warning: Empty tweet! Please write something. </div>
+
+        <div id="error-long-tweet" class="error" style="display: none;">
+          Warning: You've exceeded 140 characters! Please shorten and try again. </div>
+
         <form action="/tweets" method="POST" id="new-tweet-form">
           <label for="tweets-text"></label>
           <textarea name="text" id="tweets-text" placeholder="What are you humming about?"></textarea>

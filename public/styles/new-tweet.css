@@ -1,5 +1,7 @@
 /*
 
+Error Slides up and down when needed, hidden when not needed
+
 What are you humming about?
 
 centered bottom border
@@ -25,6 +27,7 @@ tweet styled button                        right-aligned character counter
 .tweet-text {
   display: flex;
   position: column;
+  width: 90%;
   align-items: flex-start;
   justify-content: flex-start;
   font-family: "Source Sans 3", sans-serif;
@@ -34,7 +37,7 @@ tweet styled button                        right-aligned character counter
 display: flex;
 flex-direction: row;
 justify-content: space-between;
-border-top: 5px ridge #878686;
+border-top: 5px solid #878686;
 margin-top: 10px;
 font-family: "Source Sans 3", sans-serif;
 }
@@ -60,11 +63,27 @@ font-family: "Source Sans 3", sans-serif;
 
 .counter {
   display: flex;
-  /*position: column; */
   flex-direction: column;
   justify-content: flex-end;
   font-family: "Source Sans 3", sans-serif;
   padding-bottom: 10px;
+}
+
+.error {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 200;
+  font-family: "Source Sans 3", sans-serif;
+  padding-bottom: 10px;
+  border-color: darkred;
+  border-top-style: solid;
+  border-left-style: solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  color: #9f2000;
+  background-color: #FEEFB3;
 }
 
 .negativetweet {
