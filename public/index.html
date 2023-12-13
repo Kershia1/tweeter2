@@ -60,46 +60,47 @@
           <i class="fa-solid fa-angles-down" style="color: red" ></i>
         </div>
     </nav>
-
- <div class="left">
-    <header class="header">
-        <div class="user-icon">
-            <img src="/images/profile-hex.png"> 
-        </div>
-        <br>
-        <div class="user-name">
-            <h2>Desiree Ingram</h2>
-        </div>
-    </header>
-</div>
-
-    <!-- Page-specific (main) content here -->
-<div class="right">
-    <main class="container">
-      <!-- New Tweet Section -->
-      <section class="new-tweet">
-        <h2 class="header-new-tweet"> Compose Tweet</h2>
-        <span id="error"></span> 
-
-        <div id="error-empty-tweet" class="error" style="display: none;">
-         Warning: Empty tweet! Please write something. </div>
-
-        <div id="error-long-tweet" class="error" style="display: none;">
-          Warning: You've exceeded 140 characters! Please shorten and try again. </div>
-
-        <form action="/tweets" method="POST" id="new-tweet-form">
-          <label for="tweets-text"></label>
-          <textarea name="text" id="tweets-text" placeholder="What are you humming about?"></textarea>
-          <div class="footer-new-tweet">
-            <button class="button" type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweets-text">140</output>
+<div class="both-sides-container">
+  <div class="left">
+      <header class="header">
+          <div class="user-icon">
+              <img src="/images/profile-hex.png"> 
           </div>
-        </form>
-      </section>
+          <br>
+          <div class="user-name">
+              <h2>Desiree Ingram</h2>
+          </div>
+      </header>
+  </div>
 
-      <!-- Tweets Section -->
-      <section class="tweets-container"></section>
-  </main>
+      <!-- Page-specific (main) content here -->
+  <div class="right">
+      <main class="container">
+        <!-- New Tweet Section -->
+        <section class="new-tweet">
+          <h2 class="header-new-tweet"> Compose Tweet</h2>
+          <span id="error"></span> 
+
+          <div id="error-empty-tweet" class="error" style="display: none;">
+          Warning: Empty tweet! Please write something. </div>
+
+          <div id="error-long-tweet" class="error" style="display: none;">
+            Warning: You've exceeded 140 characters! Please shorten and try again. </div>
+
+          <form action="/tweets" method="POST" id="new-tweet-form">
+            <label for="tweets-text"></label>
+            <textarea name="text" id="tweets-text" placeholder="What are you humming about?"></textarea>
+            <div class="footer-new-tweet">
+              <button class="button" type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweets-text">140</output>
+            </div>
+          </form>
+        </section>
+
+        <!-- Tweets Section -->
+        <section class="tweets-container"></section>
+    </main>
+  </div>
 </div>
 
   </body>

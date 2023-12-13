@@ -32,31 +32,43 @@ header {
 
 
 /* Style desktop screens */
-@media only screen and (min-width: 1024px) {
-  #header {
-height: 120px;
-  }
-}
+/*@media only screen and (min-width: 1024px) {} */
 /* Style tablet screens min and max widths added to account for screen sizing, add nav bar styling here to allow the header to take on the nav elements when tablet sized */
 
 @media only screen and /*(min-width: 768px)*/ (max-width: 1023px) {
+
+  .left {
+    margin-top: 120px; /*match the height of the nav*/
+  }
+  
   nav {
+    position: relative;
+    display: flex;
+    flex-direction: row;
     background-color: #ff7308;
     background-image: url("https://www.transparenttextures.com/patterns/exclusive-paper.png");
-    height: auto;
+    height: 120px;
+    width: 100%;
     padding: 10px;
   }
-  .user-icon {
+/*
+  .header {
     margin: 0;
-  }
-  .user-name {
-    margin: 0;
-  }
+    height: 120px;
+    justify-content: center;
+    align-items: center;
+  }  */
+.user-icon, .user-name {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%); /* move the element to the left by 50% of its own width, and center vertically, fingers crossed */
+}
 }
 
 /* Style mobile phone screens */
 @media only screen and (max-width: 767px) {
-  #header {
+  .header {
     width: 100; /* 100% of the parent */
     margin: auto; /* center the container */
   }
