@@ -34,52 +34,23 @@ header {
 /* Style desktop screens */
 @media only screen and (min-width: 1024px) {
   #header {
-    width: 100; /* 100% of the parent */
+height: 120px;
   }
 }
 /* Style tablet screens min and max widths added to account for screen sizing, add nav bar styling here to allow the header to take on the nav elements when tablet sized */
 
 @media only screen and /*(min-width: 768px)*/ (max-width: 1023px) {
-  #header {
-      background-color: #ff7308;
-      font-family: "Bungee", sans-serif;
-      color: #FFFFFF;
-      display: flex;
-      position: fixed;
-      justify-content: space-between;
-      align-items: flex-start;
-      height: 120px;
-      width: 100%;
-      padding-right: 1.5em;
-      padding-left: 1.5em;
+  nav {
+    background-color: #ff7308;
+    background-image: url("https://www.transparenttextures.com/patterns/exclusive-paper.png");
+    height: auto;
+    padding: 10px;
   }
-
-  #header .logo {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    margin-top: 10px;
+  .user-icon {
+    margin: 0;
   }
-
-  #header .user-name {
-    display: flex;
-    flex-direction: column;
-    justify-content: baseline;
-    align-items: center;
-    margin-top: 10px;
-  }
-
-  header .write-a-new-tweet {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
-
-  header .fa-angle-double-down {
-    display: none;
+  .user-name {
+    margin: 0;
   }
 }
 
