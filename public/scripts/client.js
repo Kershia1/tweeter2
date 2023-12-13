@@ -32,8 +32,7 @@ $("#error-long-tweet").hide(); //hide the error message by default
     console.log("in createTweetElement");
     let approxTime;
     try {
-      const timeagoInstance = timeago();
-      approxTime = timeagoInstance.format(tweetStuff.created_at);
+      approxTime = timeago.format(tweetStuff.created_at);
     } catch (error) {
       console.error('timeago is not defined');
     }
