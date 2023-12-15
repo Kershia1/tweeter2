@@ -117,16 +117,7 @@ header.tweets-header {
 /* Style desktop screens */
 @media only screen and (min-width: 1024px) {
   #tweets {
-    width: 100; /* 100% of the parent */
-  }
-}
-
-/*
-/* Style tablet screens min and max widths added to account for screen sizing 
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-  #tweets {
-    width: 100; /* 80% of the parent, needed? 
-    margin: auto; /* center the container
+    width: 100;
   }
 }
 

@@ -1,15 +1,3 @@
-/*
-
-Error Slides up and down when needed, hidden when not needed
-
-What are you humming about?
-
-centered bottom border
-__________________________________________________________________________
-tweet styled button                        right-aligned character counter 
-
-*/
-
 .new-tweet {
   display: flex;
   width: 90%;
@@ -96,40 +84,7 @@ font-family: "Source Sans 3", sans-serif;
 /* Style desktop screens */
 @media only screen and (min-width: 1024px) {
   .new-tweet {
-    width: 90%; /* 100% of the parent */
+    width: 90%;
     margin-top: 160px;
   }
 }
-/* Style tablet screens min and max widths added to account for screen sizing 
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-
-  .new-tweet {
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .new-tweet textarea {
-    width: 99%;
-    display: flex;
-    flex-direction: row;
-  }
-
-  .header-new-tweet{
-    width: 90%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-.footer-new-tweet{
-  width: 99%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding-left: 10px;
-}
-}
-
-/* Style mobile phone screens */
-

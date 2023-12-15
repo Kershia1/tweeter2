@@ -9,21 +9,21 @@ $(document).ready(function () {
 
 //escape function to prevent cross site scripting, goes at the top of the file?
 const escape = function (str) {
-  let div = document.createElement('div');//creates a div element
-  div.appendChild(document.createTextNode(str)); //creates a text node containing the string, and appends it to the div
-  return div.innerHTML; //returns the text content of the div
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
 }
 
 //errror message function after XSS validation?
-$("#error-empty-tweet").hide(); //hide the error message by default
-$("#error-long-tweet").hide(); //hide the error message by default
+$("#error-empty-tweet").hide();
+$("#error-long-tweet").hide();
 
   const renderTweets = function (tweets) {
     console.log("in renderTweets");
-    $('.tweets-container').empty(); // empties the tweets container so that it doesn't keep appending the same tweets over and over again
+    $('.tweets-container').empty();
     for (let tweet of tweets) {
-      let $tweet = createTweetElement(tweet);//tweet html
-      $('.tweets-container').prepend($tweet);//prepend to tweets container instead of append so that new tweets are at the top
+      let $tweet = createTweetElement(tweet);
+      $('.tweets-container').prepend($tweet);
     }
   };
 
@@ -66,7 +66,7 @@ $("#error-long-tweet").hide(); //hide the error message by default
       </footer>
     </article> `);
 
-    return $tweet; //return jquery obj for tweet html
+    return $tweet;
   };
 
   const loadTweets = () => {
@@ -81,34 +81,31 @@ $("#error-long-tweet").hide(); //hide the error message by default
 
     const tweetContent = document.getElementById('tweets-text').value;
 
-    // $("#error-empty-tweet").slideDown("slow"); //show the error message
-    // $("#error-long-tweet").slideDown("slow"); //show the error message
-
     if (!tweetContent) {
-      $("#error-empty-tweet").slideDown("slow"); //show the error message
-      $("#error-long-tweet").hide(); //hide this error message
+      $("#error-empty-tweet").slideDown("slow");
+      $("#error-long-tweet").hide();
 
     } else if (tweetContent.length > 140) {
-      $("#error-long-tweet").slideDown("slow"); //show the error message
-      $("#error-empty-tweet").hide(); //hide this error message
+      $("#error-long-tweet").slideDown("slow");
+      $("#error-empty-tweet").hide();
 
-    } else { //if tweet is valid no errors are shown
-      $("#error-empty-tweet").hide(); //hide this error message
-      $("#error-long-tweet").hide(); //hide this error message
+    } else {
+      $("#error-empty-tweet").hide();
+      $("#error-long-tweet").hide();
       console.log("tweet is valid");
       
       const newTweet = $(this).serialize();
       console.log("new tweet is: ", newTweet);
-      $(this).find('.tweets-text').val(''); //clear the text area after submission
-      $(this).find('.counter').val(140); //reset the counter to 140 after 
+      $(this).find('.tweets-text').val('');
+      $(this).find('.counter').val(140);
 
       // Send the AJAX POST request to the server
       $.post("/tweets", newTweet, function (response) {
         console.log("Success Tweet Posted: ", response);
-        loadTweets(); //this happens if the post will finally work
+        loadTweets();
       });
     }
 
   });
-  loadTweets(); //load tweets on page load
+  loadTweets();
 });

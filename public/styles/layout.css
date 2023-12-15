@@ -59,54 +59,54 @@ body {
  /* Style desktop screens */
 @media only screen and (min-width: 1024px) {
 
-  .body {
-    margin-top: 40px;
-  }
+    .body {
+      margin-top: 40px;
+    }
 
-  .left {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 30%;
-    order: 1;
-    flex: 1;
+    .left {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 30%;
+      order: 1;
+      flex: 1;
 
-  }
+    }
 
-  .header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
+    .header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
 
-  .both-users-container {
-    display: flex; 
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-right: 40px;
-  }
-  .right {
-    display: flex;
-    width: 70%;
-    margin: auto;
-    flex: 2;
-    order: 2;
-  }
+    .both-users-container {
+      display: flex; 
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-right: 40px;
+    }
+    .right {
+      display: flex;
+      width: 70%;
+      margin: auto;
+      flex: 2;
+      order: 2;
+    }
 
-  .both-sides-container {
-    display: flex;
-    flex-direction: row;
-    width: 90%;
-    justify-content: center;
-    align-items: flex-start;
-    margin-top: 20px auto;
-  }
+    .both-sides-container {
+      display: flex;
+      flex-direction: row;
+      width: 90%;
+      justify-content: center;
+      align-items: flex-start;
+      margin-top: 20px auto;
+    }
 
-  .tweets, .new-tweet {
-    width: 100; /* 100% of the parent */
-    margin: auto; /* center the container */
+    .tweets, .new-tweet {
+      width: 100;
+      margin: auto;
   }
 }
 /* Style tablet screens min and max widths added to account for screen sizing */
@@ -119,7 +119,6 @@ body {
   .left {
     order: 1;
     padding-top: 60px;
-    /* flex:0; */
   }
 
   .right {
