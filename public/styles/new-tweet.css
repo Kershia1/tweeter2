@@ -16,16 +16,18 @@ tweet styled button                        right-aligned character counter
   flex-direction: column;
   justify-content: space-between;
   font-family: "Source Sans 3", sans-serif;
-  /* border: solid 1px green; */
+  border: solid 1px green;
 }
 
 .new-tweet textarea {
   width: 100%;
+  border: orange solid 1px;
 }
 
 .header-new-tweet {
   display: flex;
-  position: column;  
+  position: column;
+  border: solid 1px blue;
 }
 
 .tweet-text {
@@ -35,6 +37,7 @@ tweet styled button                        right-aligned character counter
   align-items: flex-start;
   justify-content: flex-start;
   font-family: "Source Sans 3", sans-serif;
+  border: solid 1px black;
 }
 
 .footer-new-tweet{
@@ -44,6 +47,7 @@ justify-content: space-between;
 border-top: 5px solid #878686;
 margin-top: 10px;
 font-family: "Source Sans 3", sans-serif;
+border: solid 1px brown
 }
 
 .button {
@@ -102,15 +106,42 @@ font-family: "Source Sans 3", sans-serif;
 }
 /* Style tablet screens min and max widths added to account for screen sizing */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
+
   .new-tweet {
-    width: 90%; /* 80% of the parent, needed? */
-    justify-content: center;
-    align-items: center;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* add this line */
   }
 
-  .header-new-tweet, .tweet-text, .footer-new-tweet {
-    width: auto;
+  /*.header-new-tweet,*/ .new-tweet textarea {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
   }
+
+  /* .new-tweet {
+    width: 90%; /* 80% of the parent, needed? 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  } */
+
+  .header-new-tweet{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+/*
+.new-tweet textarea {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  } */
 }
 
 /* Style mobile phone screens */
