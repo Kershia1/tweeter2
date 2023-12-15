@@ -38,21 +38,31 @@ header {
 }
 
 @media only screen and /*(min-width: 768px)*/ (max-width: 1023px) {
-
-  .header .user-icon, .header .user-name {
+/* 
+  .header .user-icon {
+    display: flex;
     position: absolute;
-    top: 50%;
-    left: 50%; /* if you also want to center the element horizontally */
-    transform: translate(-50%, -50%);
-    height:fit-content;
-  }
-  
-  .header {
-    visibility: hidden;
-    opacity: 0;
-    border: black solid 1px;
+    right: 10px;
+    visibility: visible;
+    opacity: 1;
+    align-items: center;
+    transform: translateY(-50%); /* shift up by half of their own height
+    border: none;
+    margin-top: 0px;
+    padding: 0px;
+  } 
+
+  .header .user-name {
+    display: flex;
+    position: absolute;
+    right: 10px;
+    visibility: visible;
+    opacity: 1;
+    align-items: center;
+    transform: translateY(-50%); /* shift up by half of their own height 
   }
 }
+*/
 
 /* Style mobile phone screens */
 @media only screen and (max-width: 767px) {
