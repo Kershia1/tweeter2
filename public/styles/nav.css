@@ -28,14 +28,18 @@ put the double arrow below write a new tweet.
   justify-content: flex-end;
 } 
 
-@media only screen and (min-width: 1024px) {
+/* @media only screen and (min-width: 1024px) {
   nav {
     height: 120px;
   }
-
-  .write-a-new-tweet {
-    /*
-no clue how to style yet
-*/
-  }
 }
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  nav {
+    display: flex;
+    justify-content: space-between;
+  }
+  .user-icon, .user-name {
+    display: block;
+  }
+} */

@@ -32,8 +32,8 @@ body {
 .right {
   flex: 2;
 }
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
+
+ /* Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
  .title {
@@ -44,6 +44,7 @@ body {
 
  main {
   display: flex;
+  border: 3px solid purple; 
   background-color: #f4f1ec;
   width: 100%;
   flex-direction: column;
@@ -54,26 +55,44 @@ body {
   padding-right: 10px;
  }
 
- /* Style desktop screens */
-@media only screen and (min-width: 1024px) {
-  .both-sides-container{
-    display: flex;
-    flex-direction: column;
-  }
-
-  .left {
-    flex: 1;
-  }
-  
-  .right {
-    flex: 2;
-  }
-  #tweets {
-    width: 100; /* 100% of the parent */
-  }
+ .both-sides-container{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  /* border: 3px solid yellow; */
 }
+
+.left {
+  display: flex;
+  flex: 1;
+  /* width: 30%;
+  border: solid 3px black; */
+}
+
+.right {
+  display: flex;
+  flex: 2;
+  /* justify-content: center;
+  align-items: center; */
+    /* width: 70%; */
+  /* border: 3px solid red; */
+}
+
+
+ /* Style desktop screens should do mobile 1st and work from smallest to largest */
+
+/*
+/* Style mobile phone screens 
+@media only screen and (max-width: 767px) {
+  #tweets {
+    width: 100; /* 100% of the parent 
+    margin: auto; /* center the container 
+  }
+} */
+
+
 /* Style tablet screens min and max widths added to account for screen sizing */
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
+/* @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .both-sides-container {
     display: flex;
     flex-direction: row;
@@ -83,30 +102,48 @@ body {
   } 
   
   #tweets {
-    width: 100; /* 80% of the parent, needed? */
-    margin: auto; /* center the container */
+    width: 100;
+    margin: auto; 
   }
   .right {
     width: 100;
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 3px solid rgb(0, 255, 17);
   }
 
   .left{
   display: none;
+  border: 3px solid rgb(0, 21, 255);
   }
 
   nav {
     display: flex;
     justify-content: space-between;
   }
-}
+} 
 
-/* Style mobile phone screens */
-@media only screen and (max-width: 767px) {
-  #tweets {
-    width: 100; /* 100% of the parent */
-    margin: auto; /* center the container */
+
+/* Style Desktop screens min and max widths added to account for screen sizing 
+@media only screen and (min-width: 768px) {
+  .both-sides-container{
+    display: flex;
+    border: 3px solid yellow;
+    width: 100%;
+    flex-direction: row;
   }
-}
+
+  .left {
+  border: solid 3px black;
+  width: 30%;
+  }
+  
+  .right {
+    border: 3px solid red;
+    width: 70%;
+  }
+  #tweets {
+    width: 100; /* 100% of the parent
+  }
+} */
