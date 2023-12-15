@@ -38,36 +38,20 @@ header {
 }
 
 @media only screen and /*(min-width: 768px)*/ (max-width: 1023px) {
-/* 
-  .header .user-icon {
-    display: flex;
-    position: absolute;
-    right: 10px;
-    visibility: visible;
-    opacity: 1;
-    align-items: center;
-    transform: translateY(-50%); /* shift up by half of their own height
-    border: none;
-    margin-top: 0px;
-    padding: 0px;
-  } 
-
-  .header .user-name {
-    display: flex;
-    position: absolute;
-    right: 10px;
-    visibility: visible;
-    opacity: 1;
-    align-items: center;
-    transform: translateY(-50%); /* shift up by half of their own height 
+  .header {
+    width: 100; /* 100% of the parent */
+    margin-top: 0;
+    margin: auto; /* center the container */
   }
 }
-*/
 
 /* Style mobile phone screens */
 @media only screen and (max-width: 767px) {
   .header {
-    width: 100; /* 100% of the parent */
-    margin: auto; /* center the container */
+    display: flex;
+    flex-direction: row;
+    width: 100;
+    margin: auto;
+    margin-top: 0;
   }
 }

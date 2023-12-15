@@ -27,7 +27,8 @@ body {
 
 .left {
   flex: 1;
-  margin-top: 100px;
+  width: 100%;
+  margin-top: 0;
 }
 
 .right {
