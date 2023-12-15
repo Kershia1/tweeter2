@@ -92,8 +92,8 @@ font-family: "Source Sans 3", sans-serif;
 .negativetweet {
   color: red;
 }
-/* 
-/* Style desktop screens 
+
+/* Style desktop screens */
 @media only screen and (min-width: 1024px) {
   .new-tweet {
     width: 90%; /* 100% of the parent */
