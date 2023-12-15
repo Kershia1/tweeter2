@@ -40,7 +40,23 @@ header {
 /* Style tablet screens min and max widths added to account for screen sizing, add nav bar styling here to allow the header to take on the nav elements when tablet sized */
 
 @media only screen and /*(min-width: 768px)*/ (max-width: 1023px) {
-  #header {
+
+  .header .user-icon, .header .user-name {
+    position: absolute;
+    top: 50%;
+    left: 50%; /* if you also want to center the element horizontally */
+    transform: translate(-50%, -50%);
+  }
+  
+  .header {
+    display: flex;
+    flex-direction: column;
+    background-color:whitesmoke;
+    background-image: none;
+    /* border: black solid 1px; */
+  }
+
+  /* #header {
       background-color: #ff7308;
       font-family: "Bungee", sans-serif;
       color: #FFFFFF;
@@ -81,6 +97,7 @@ header {
   header .fa-angle-double-down {
     display: none;
   }
+} */
 }
 
 /* Style mobile phone screens */
