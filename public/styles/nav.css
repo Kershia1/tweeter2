@@ -38,7 +38,7 @@ put the double arrow below write a new tweet.
     position: fixed;
     justify-content: space-between;
     align-items: flex-start;
-    height: 400px;
+    height: auto;
     width: 100%;
     padding-right: 1.5em;
     padding-left: 1.5em;
@@ -52,10 +52,10 @@ put the double arrow below write a new tweet.
     display: flex;
     justify-content: flex-end;
   }
-
+/* 
   .nav .user-icon, .nav .user-name {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+  } */
 }

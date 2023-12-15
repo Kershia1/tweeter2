@@ -27,6 +27,7 @@ body {
 
 .left {
   flex: 1;
+  margin-top: 100px;
 }
 
 .right {
@@ -56,22 +57,54 @@ body {
 
  /* Style desktop screens */
 @media only screen and (min-width: 1024px) {
-  #tweets {
+  .tweets {
     width: 100; /* 100% of the parent */
   }
 }
 /* Style tablet screens min and max widths added to account for screen sizing */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-  #tweets {
-    width: 100; /* 80% of the parent, needed? */
+  .tweets {
+    width: 100%;
+    margin: auto;
+  }
+
+  .left {
+    visibility: hidden;
+    opacity: 0;
+    border: #545149 solid 1px;
+    order: 2;
+  }
+
+  .right {
+    width: auto;
+    margin: auto;
+    /* border: red solid 1px; */
+    order: 1;
+    align-items: center;
+  }
+
+  .both-sides-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+  .new-tweet {
+    width: 100%; /* 90% of the parent */
     margin: auto; /* center the container */
   }
 }
 
 /* Style mobile phone screens */
 @media only screen and (max-width: 767px) {
-  #tweets {
+  .tweets {
     width: 100; /* 100% of the parent */
     margin: auto; /* center the container */
+  }
+
+  .new-tweet{
+    width: 100;
+    margin: auto;
   }
 }
