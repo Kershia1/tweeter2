@@ -1,4 +1,4 @@
-nav {
+.nav {
   background-color: #4056A1;
   font-family: "Bungee", sans-serif;
   color: #FFFFFF;
@@ -28,14 +28,28 @@ put the double arrow below write a new tweet.
   justify-content: flex-end;
 } 
 
-@media only screen and (min-width: 1024px) {
-  nav {
-    height: 120px;
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .nav {
+    background-color: #4056A1;
+    font-family: "Bungee", sans-serif;
+    background-color: #ff7308;
+    background-image: url("https://www.transparenttextures.com/patterns/exclusive-paper.png");
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 400px;
+    width: 100%;
+    padding-right: 1.5em;
+    padding-left: 1.5em;
   }
-
   .write-a-new-tweet {
-    /*
-no clue how to style yet
-*/
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  a {
+    display: flex;
+    justify-content: flex-end;
   }
 }
