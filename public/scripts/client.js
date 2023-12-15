@@ -30,12 +30,7 @@ $("#error-long-tweet").hide();
   //take tweet obj return jquery obj with tweet html
   const createTweetElement = function (tweetStuff) {
     console.log("in createTweetElement");
-    let approxTime;
-    try {
-      approxTime = timeago.format(tweetStuff.created_at);
-    } catch (error) {
-      console.error('timeago is not defined');
-    }
+    let approxTime = timeago.format(tweetStuff.created_at);
 
     //create jquery obj for tweet html
     let $tweet = $(`
