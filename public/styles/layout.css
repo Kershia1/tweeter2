@@ -71,8 +71,11 @@ body {
   .left {
     visibility: hidden;
     opacity: 0;
+    height: 0;
+    width: 0;
     border: #545149 solid 1px;
-    order: 2;
+    order: 3;
+    flex:0;
   }
 
   .right {
@@ -83,9 +86,13 @@ body {
     align-items: center;
   }
 
+  .header {
+    order: 2;
+  }
+
   .both-sides-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: auto;
