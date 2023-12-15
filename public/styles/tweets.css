@@ -82,7 +82,7 @@ header.tweets-header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border-top: 5px ridge #878686;
+  border-top: 5px solid #878686;
   margin-top: 10px;
   font-size: 12px;
   font-family: "Source Sans 3", sans-serif;
@@ -128,10 +128,3 @@ header.tweets-header {
   }
 }
 
-/* Style mobile phone screens */
-@media only screen and (max-width: 767px) {
-  #tweets {
-    width: 100; /* 100% of the parent */
-    margin: auto; /* center the container */
-  }
-}

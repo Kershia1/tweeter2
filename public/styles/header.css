@@ -31,8 +31,12 @@ header {
 
 /* Style desktop screens */
 @media only screen and (min-width: 1024px) {
-  #header {
-    width: 100%; /* 100% of the parent */
+  .header {
+    width: 100%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
   }
 }
 
@@ -41,16 +45,5 @@ header {
     width: 100; /* 100% of the parent */
     margin-top: 120px;
     margin: auto; /* center the container */
-  }
-}
-
-/* Style mobile phone screens */
-@media only screen and (max-width: 767px) {
-  .header {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    margin: auto;
-    margin-top: 0;
   }
 }

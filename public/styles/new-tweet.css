@@ -97,6 +97,7 @@ font-family: "Source Sans 3", sans-serif;
 @media only screen and (min-width: 1024px) {
   .new-tweet {
     width: 90%; /* 100% of the parent */
+    margin-top: 160px;
   }
 }
 /* Style tablet screens min and max widths added to account for screen sizing */
@@ -131,10 +132,4 @@ font-family: "Source Sans 3", sans-serif;
 }
 
 /* Style mobile phone screens */
-@media only screen and (max-width: 767px) {
-  .new-tweet{
-    width: 100;
-    margin: auto;
-  }
-}
 

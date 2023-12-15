@@ -28,6 +28,12 @@ put the double arrow below write a new tweet.
   justify-content: flex-end;
 } 
 
+@media only screen and (min-width: 1024px) {
+  .nav {
+    margin-bottom: 20px;
+  }
+}
+
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .nav {
     background-color: #4056A1;
