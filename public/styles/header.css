@@ -8,8 +8,6 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
-  padding-top: 20px;
 }
 
 .user-icon {
@@ -31,50 +29,21 @@ header {
   align-items: center;
 } 
 
-
 /* Style desktop screens */
-/*@media only screen and (min-width: 1024px) {} */
-/* Style tablet screens min and max widths added to account for screen sizing, add nav bar styling here to allow the header to take on the nav elements when tablet sized */
-
-/* @media only screen and (min-width: 768px) and (max-width: 1023px) {
-
-  .left {
-    margin-top: 120px; /*match the height of the nav 
-  }
-  
+@media only screen and (min-width: 1024px) {
   .header {
-    display: flex;
-    background-color: #f4f1ec;;
-    } 
-
-  nav {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    background-color: #ff7308;
-    background-image: url("https://www.transparenttextures.com/patterns/exclusive-paper.png");
-    flex-direction: column; 
-    align-items: center;
-    justify-content: space-between;
-    height: auto;
     width: 100%;
-    padding: 10px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
   }
-
-.user-icon, .user-name {
-    display: block;
-  }
-
-.user-name{
-  position: static;
-
 }
 
-/* Style mobile phone screens
-@media only screen and (max-width: 767px) {
+@media only screen and /*(min-width: 768px)*/ (max-width: 1023px) {
   .header {
-    width: 100; /* 100% of the parent
-    margin: auto; /* center the container
+    width: 100; /* 100% of the parent */
+    margin-top: 120px;
+    margin: auto; /* center the container */
   }
 }
-} */

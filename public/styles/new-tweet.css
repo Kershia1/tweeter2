@@ -16,7 +16,6 @@ tweet styled button                        right-aligned character counter
   flex-direction: column;
   justify-content: space-between;
   font-family: "Source Sans 3", sans-serif;
-  
 }
 
 .new-tweet textarea {
@@ -25,7 +24,7 @@ tweet styled button                        right-aligned character counter
 
 .header-new-tweet {
   display: flex;
-  position: column;  
+  position: column;
 }
 
 .tweet-text {
@@ -96,22 +95,41 @@ font-family: "Source Sans 3", sans-serif;
 /* 
 /* Style desktop screens 
 @media only screen and (min-width: 1024px) {
-  #tweets-container {
-    width: 100; /* 100% of the parent 
+  .new-tweet {
+    width: 90%; /* 100% of the parent */
+    margin-top: 160px;
   }
 }
 /* Style tablet screens min and max widths added to account for screen sizing 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-  #tweets-container {
-    width: 100; /* 80% of the parent, needed? 
-    margin: auto; /* center the container 
+
+  .new-tweet {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
   }
+
+  .new-tweet textarea {
+    width: 99%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .header-new-tweet{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+.footer-new-tweet{
+  width: 99%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 10px;
+}
 }
 
-/* Style mobile phone screens 
-@media only screen and (max-width: 767px) {
-  #tweets-container {
-    width: 100; /* 100% of the parent 
-    margin: auto; /* center the container 
-  }
-} */
+/* Style mobile phone screens */
+
