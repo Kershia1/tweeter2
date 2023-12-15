@@ -38,7 +38,7 @@ put the double arrow below write a new tweet.
     position: fixed;
     justify-content: space-between;
     align-items: flex-start;
-    height: auto;
+    height: 60px;
     width: 100%;
     padding-right: 1.5em;
     padding-left: 1.5em;
