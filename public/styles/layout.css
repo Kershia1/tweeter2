@@ -47,7 +47,7 @@ body {
  main {
   display: flex;
   background-color: #f4f1ec;
-  width: 100%;
+  width: 90%;
   flex-direction: column;
   align-items: center;
   font-family: "Source Sans 3", sans-serif;
